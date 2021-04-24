@@ -1,0 +1,38 @@
+@mixin responsive($breakpoint) {
+
+    // For Extra Small Phone
+    @if $breakpoint == xsm-phone {
+        
+        @media only screen and ( min-width : 320px ) { @content };
+    }
+    
+    // For Small Phone
+    @if $breakpoint == sm-phone {
+        
+        @media only screen and ( min-width : 480px ) { @content };
+    }
+
+    // For Phone
+    @if $breakpoint == phone {
+        
+        @media only screen and ( min-width : 576px ) { @content };
+    }
+
+    // For Tablet 
+    @if $breakpoint == tablet {
+        
+        @media only screen and ( min-width : 768px ) { @content };
+    }
+
+    // For Desktop 
+    @if $breakpoint == desktop {
+        
+        @media only screen and ( min-width : 992px ) { @content };
+    }
+
+    // For Larg Desktop
+    @if $breakpoint == larg-desktop {
+        
+        @media only screen and ( min-width : 1200px ) { @content };
+    }
+}

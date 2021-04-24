@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER ONLINE</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/order-online.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Start Header-->
+    <div class="header" id="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>SALMON</h1>
+                        <img src="images/1.png" alt="Salmon">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <input type="checkbox" class="nav-checkbox" id="navigation">
+                    <label for="navigation" class="checkbox-label">
+                        <span class="nav-icon"></span>
+                    </label>
+                    <div class="links-container">
+                        <div class="links">
+                            <ul id="link">
+                                <li><a href="index.html" class="active">HOME</a></li>
+                                <li><a href="menu.html">MENU</a></li>
+                                <li><a href="order-online.html">ORDER ONLINE</a></li>
+                                <li><a href="location.html">LOCATION</a></li>
+                                <li><a href="sign-up.html">SIGN UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header-->
+
+    <!-- Start Online Order Us  -->
+    <div class="onlin-order">
+        <img src="images/4.jpg" alt="Salmon">
+        <div class="container">
+            <div class="overlay">
+                <div class="info">
+                    <h4>Online Order</h4>
+                    <div class="meal">
+                        <p>What Do you like to eat!</p>
+                        <span><i class="fas fa-utensils"></i></span>
+                        <input type="text" name="Msg" value="" placeholder="Your Demand">
+                    </div>
+                    <p>Please Select An order type:</p>
+                    <input type="radio" name="order-type" value="Pickup">
+                    <label>Pickup</label>
+                    <input type="radio" name="order-type" value="Delivery">
+                    <label>Delivery</label>
+                    <div>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <input type="text" name="Msg" value="" placeholder="Address">
+                        <button>GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Onlin Order Us  -->
+
+    <!-- Start Book Table -->
+    <div class="Booking">
+        <div class="container">
+            <h4>BOOK A TABLE NOW!</h4>
+            <button id="booking" class="booking-btn" onclick="bookingTable()">BOOK NOW</button>
+            <div id="book-form" class="book-form">
+                <div class="form-content">
+                    <h2>TABLE BOOKING RESERVATION FORM</h2>
+                    <span id="close" class="close">&times;</span>
+                    <div class="book-info">
+                        <input type="text" placeholder="Name..">
+                        <input type="email" placeholder="Email..">
+                        <input type="tel" placeholder="Mobile..">
+                        <input type="date" placeholder="Date..">
+                        <input type="time" placeholder="Time..">
+                        <input type="number" min="1" placeholder="2 Person">
+                        <button>Book A Table</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- End Book Table -->
+    
+    <!-- Start Information Section -->
+    <div class="information">
+    <div class="container">
+        <h2>Join The Salmon`s Family!</h2>
+        <div class="info-box">
+            <div class="info info-left">
+                <p>We`ll Only Send Our Amazing Goods, We promise.</p>
+                <div>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fas fa-envelope-square"></i>
+                </div>
+                <button class="btn">Sign Up</button>
+            </div>
+            <div class="info info-right">
+                <h4>Hours:</h4>
+                <p>Thursday + Friday + Saturday   11am - 12am</p>
+                <p>Sunday To Wednesday  11am - 11pm</p>
+                <p>*Kitchen open until 11pm</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Start Information Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>All Rights Reserved &copy; <span>Osama Nos7y 2021</span></p>
+        </div>
+    </div>
+
+    <!-- Start Footer -->
+    <script src="js/main.js"></script>
+</body>
+</html>

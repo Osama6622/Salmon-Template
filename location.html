@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCATION</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/location.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Start Header-->
+    <div class="header" id="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>SALMON</h1>
+                        <img src="images/1.png" alt="Salmon">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <input type="checkbox" class="nav-checkbox" id="navigation">
+                    <label for="navigation" class="checkbox-label">
+                        <span class="nav-icon"></span>
+                    </label>
+                    <div class="links-container">
+                        <div class="links">
+                            <ul id="link">
+                                <li><a href="index.html" class="active">HOME</a></li>
+                                <li><a href="menu.html">MENU</a></li>
+                                <li><a href="order-online.html">ORDER ONLINE</a></li>
+                                <li><a href="location.html">LOCATION</a></li>
+                                <li><a href="sign-up.html">SIGN UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header-->
+
+    <!-- Start About Us  -->
+    <div class="about">
+        <img src="images/2.jpg" alt="Salmon">
+        <div class="overlay"></div>
+        <div class="txt">
+            <h3>Find Your SALMON !</h3>
+        </div>
+    </div>
+    <!-- End About Us  -->
+
+    <!-- Start Location -->
+    <div class="location">
+        <div class="container">
+            <div class="info-text">
+                <div class="first">
+                    <h3>central</h3>
+                    <p>5144 N. Central Ave</p>
+                    <p>Phoenix, 89501</p>
+                    <button>Order Online</button>
+                </div>
+                <div class="second">
+                    <h3>East</h3>
+                    <p>302 N. Gilbert Road</p>
+                    <p>Gilbert, 8523</p>
+                    <button>Order Online</button>
+                </div>
+                <div class="third">
+                    <h3>West</h3>
+                    <p>8421 N. Scottsdale Road</p>
+                    <p>Scottsdale, 85251</p>
+                    <button>Order Online</button>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.566009725138!2d-112.07625708546044!3d33.51266675341951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b12c0d6b29233%3A0x75171543c4f7623e!2s5144%20N%20Central%20Ave%2C%20Phoenix%2C%20AZ%2085012%2C%20USA!5e0!3m2!1sen!2seg!4v1617563543201!5m2!1sen!2seg" width="90%" height="450" style="border:0; box-shadow: 2px 2px 10px #000;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Start Location -->
+    <!-- Start Book Table -->
+    <div class="Booking">
+        <div class="container">
+            <h4>BOOK A TABLE NOW!</h4>
+            <button id="booking" class="booking-btn" onclick="bookingTable()">BOOK NOW</button>
+            <div id="book-form" class="book-form">
+                <div class="form-content">
+                    <h2>TABLE BOOKING RESERVATION FORM</h2>
+                    <span id="close" class="close">&times;</span>
+                    <div class="book-info">
+                        <input type="text" placeholder="Name..">
+                        <input type="email" placeholder="Email..">
+                        <input type="tel" placeholder="Mobile..">
+                        <input type="date" placeholder="Date..">
+                        <input type="time" placeholder="Time..">
+                        <input type="number" min="1" placeholder="2 Person">
+                        <button>Book A Table</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- End Book Table -->
+
+    <!-- Start Information Section -->
+    <div class="information">
+    <div class="container">
+        <h2>Join The Salmon`s Family!</h2>
+        <div class="info-box">
+            <div class="info info-left">
+                <p>We`ll Only Send Our Amazing Goods, We promise.</p>
+                <div>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fas fa-envelope-square"></i>
+                </div>
+                <button class="btn">Sign Up</button>
+            </div>
+            <div class="info info-right">
+                <h4>Hours:</h4>
+                <p>Thursday + Friday + Saturday   11am - 12am</p>
+                <p>Sunday To Wednesday  11am - 11pm</p>
+                <p>*Kitchen open until 11pm</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Start Information Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>All Rights Reserved &copy; <span>Osama Nos7y 2021</span></p>
+        </div>
+    </div>
+
+    <!-- End Footer -->    
+
+    <script src="js/main.js"></script>
+</body>
+</html>

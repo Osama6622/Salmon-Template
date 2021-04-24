@@ -1,0 +1,922 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  font-family: "Caveat", cursive; }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto; }
+  @media only screen and (min-width: 320px) {
+    .container {
+      max-width: 290px; } }
+  @media only screen and (min-width: 480px) {
+    .container {
+      max-width: 420px; } }
+  @media only screen and (min-width: 576px) {
+    .container {
+      max-width: 540px; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media only screen and (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+
+.clearfix {
+  clear: both; }
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #fba919;
+  position: fixed;
+  z-index: 333;
+  transition: .5s; }
+  .header .nav {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+    .header .nav .logo {
+      width: 480px;
+      padding: 10px;
+      position: relative;
+      cursor: pointer; }
+      @media only screen and (min-width: 320px) {
+        .header .nav .logo {
+          margin-top: 10px; } }
+      @media only screen and (min-width: 480px) {
+        .header .nav .logo {
+          margin-top: 0; } }
+      .header .nav .logo a {
+        text-decoration: none;
+        color: #000000; }
+      .header .nav .logo h1 {
+        margin-top: 32px;
+        font-size: 40px;
+        font-weight: bold; }
+        @media only screen and (min-width: 320px) {
+          .header .nav .logo h1 {
+            font-size: 25px; } }
+        @media only screen and (min-width: 480px) {
+          .header .nav .logo h1 {
+            font-size: 40px; } }
+      .header .nav .logo img {
+        width: 130px;
+        height: 46px;
+        position: absolute;
+        left: 20px;
+        top: 10px; }
+        @media only screen and (min-width: 320px) {
+          .header .nav .logo img {
+            width: 80px;
+            height: 36px;
+            left: 17px;
+            top: 15px; } }
+        @media only screen and (min-width: 480px) {
+          .header .nav .logo img {
+            width: 130px;
+            height: 46px;
+            left: 20px;
+            top: 10px; } }
+    .header .nav .navigation {
+      position: fixed;
+      top: 30px;
+      right: 50px;
+      height: 30px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (min-width: 320px) {
+        .header .nav .navigation {
+          right: 135px; } }
+      @media only screen and (min-width: 480px) {
+        .header .nav .navigation {
+          right: 65px; } }
+      @media only screen and (min-width: 576px) {
+        .header .nav .navigation {
+          right: 65px; } }
+      .header .nav .navigation:hover .nav-icon, .header .nav .navigation:hover .nav-icon::before, .header .nav .navigation:hover .nav-icon::after {
+        background-color: #000000; }
+      .header .nav .navigation:hover .nav-icon::before {
+        top: -12px; }
+      .header .nav .navigation:hover .nav-icon::after {
+        top: 12px; }
+      .header .nav .navigation .nav-icon {
+        position: relative;
+        top: 15px; }
+        .header .nav .navigation .nav-icon, .header .nav .navigation .nav-icon::before, .header .nav .navigation .nav-icon::after {
+          width: 40px;
+          height: 4px;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: block;
+          transition: all 0.2s; }
+        .header .nav .navigation .nav-icon::before, .header .nav .navigation .nav-icon::after {
+          content: "";
+          position: absolute;
+          left: 0; }
+        .header .nav .navigation .nav-icon::after {
+          top: 10px; }
+        .header .nav .navigation .nav-icon::before {
+          top: -10px; }
+      .header .nav .navigation .nav-checkbox {
+        display: none; }
+      .header .nav .navigation .checkbox-label {
+        width: 100%;
+        height: 100%;
+        z-index: 33;
+        cursor: pointer; }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon {
+        background-color: transparent; }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon::before {
+        top: 0;
+        transform: rotate(135deg); }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon::after {
+        top: 0;
+        transform: rotate(-135deg); }
+      .header .nav .navigation .nav-checkbox:checked ~ .links-container {
+        transform: translateY(0); }
+      .header .nav .navigation .links-container {
+        width: 100%;
+        height: 100vh;
+        background-color: #1c6680;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100vh);
+        transition: all 0.5s cubic-bezier(0.19, 1.02, 0.96, 0.86); }
+        .header .nav .navigation .links-container .links {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center; }
+          .header .nav .navigation .links-container .links ul {
+            list-style: none;
+            text-align: center;
+            line-height: 50px; }
+            .header .nav .navigation .links-container .links ul li {
+              margin: 4px; }
+              .header .nav .navigation .links-container .links ul li a {
+                display: block;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 0 15px;
+                font-weight: bold;
+                color: #000;
+                transition: all 0.4s; }
+                @media only screen and (min-width: 320px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 25px; } }
+                @media only screen and (min-width: 480px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 28px; } }
+                @media only screen and (min-width: 576px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 30px; } }
+                .header .nav .navigation .links-container .links ul li a:hover {
+                  color: #fba919; }
+      @media only screen and (min-width: 768px) {
+        .header .nav .navigation {
+          right: 130px; } }
+      @media only screen and (min-width: 992px) {
+        .header .nav .navigation {
+          right: 50px; } }
+      @media only screen and (min-width: 1200px) {
+        .header .nav .navigation {
+          right: 110px; } }
+
+.sticky {
+  background-color: #1c6680; }
+
+.about {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0; }
+  .about img {
+    vertical-align: middle;
+    width: 100%;
+    max-height: 100%;
+    background-attachment: fixed; }
+  .about .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100.5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1; }
+    .about .overlay .info {
+      color: #fba919;
+      vertical-align: middle;
+      text-align: center;
+      width: 600px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      @media only screen and (min-width: 320px) {
+        .about .overlay .info {
+          padding-top: 100px; } }
+      @media only screen and (min-width: 480px) {
+        .about .overlay .info {
+          padding-top: 70px; } }
+      @media only screen and (min-width: 576px) {
+        .about .overlay .info {
+          padding-top: 100px; } }
+      @media only screen and (min-width: 768px) {
+        .about .overlay .info {
+          padding-top: 80px; } }
+      .about .overlay .info h2 {
+        font-size: 40px;
+        padding: 10px; }
+        @media only screen and (min-width: 320px) {
+          .about .overlay .info h2 {
+            font-size: 24px; } }
+        @media only screen and (min-width: 480px) {
+          .about .overlay .info h2 {
+            font-size: 40px; } }
+        .about .overlay .info h2 i {
+          font-size: 30px; }
+      .about .overlay .info .in,
+      .about .overlay .info .out {
+        transform: rotate(-7deg);
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -o-transform: rotate(-7deg); }
+      .about .overlay .info p {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 24px;
+        font-style: italic; }
+        @media only screen and (min-width: 320px) {
+          .about .overlay .info p {
+            display: none; } }
+        @media only screen and (min-width: 480px) {
+          .about .overlay .info p {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .about .overlay .info p {
+            display: none; } }
+        @media only screen and (min-width: 768px) {
+          .about .overlay .info p {
+            display: block;
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px; } }
+        @media only screen and (min-width: 992px) {
+          .about .overlay .info p {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 24px; } }
+      .about .overlay .info .btn {
+        margin-top: 70px; }
+        @media only screen and (min-width: 320px) {
+          .about .overlay .info .btn {
+            margin-top: 20px;
+            padding: 5px 12px;
+            font-size: 16px; } }
+        @media only screen and (min-width: 480px) {
+          .about .overlay .info .btn {
+            padding: 8px 20px;
+            font-size: 18px;
+            margin-top: 20px; } }
+        @media only screen and (min-width: 768px) {
+          .about .overlay .info .btn {
+            margin-top: 50px;
+            padding: 12px 25px;
+            font-size: 22px; } }
+        @media only screen and (min-width: 992px) {
+          .about .overlay .info .btn {
+            margin-top: 70px; } }
+
+.testimonials {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fba919; }
+  .testimonials .testimonials-content {
+    position: relative;
+    overflow: hidden; }
+    .testimonials .testimonials-content:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: #1c6680;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      margin-left: -1px; }
+    .testimonials .testimonials-content h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 40px; }
+      @media only screen and (min-width: 320px) {
+        .testimonials .testimonials-content h2 {
+          font-size: 18px; } }
+      @media only screen and (min-width: 480px) {
+        .testimonials .testimonials-content h2 {
+          font-size: 25px; } }
+      @media only screen and (min-width: 576px) {
+        .testimonials .testimonials-content h2 {
+          font-size: 30px; } }
+      .testimonials .testimonials-content h2 span {
+        font-weight: bold;
+        color: #1c6680;
+        text-transform: uppercase; }
+    .testimonials .testimonials-content .left,
+    .testimonials .testimonials-content .right {
+      width: calc(50% - 100px);
+      margin-bottom: 40px;
+      position: relative;
+      background-color: #e1950e;
+      padding: 20px; }
+      @media only screen and (min-width: 320px) {
+        .testimonials .testimonials-content .left,
+        .testimonials .testimonials-content .right {
+          width: 100%;
+          margin-bottom: 30px; } }
+      @media only screen and (min-width: 480px) {
+        .testimonials .testimonials-content .left,
+        .testimonials .testimonials-content .right {
+          width: 100%;
+          margin-bottom: 30px; } }
+      @media only screen and (min-width: 576px) {
+        .testimonials .testimonials-content .left,
+        .testimonials .testimonials-content .right {
+          width: 100%;
+          margin-bottom: 30px; } }
+      @media only screen and (min-width: 768px) {
+        .testimonials .testimonials-content .left,
+        .testimonials .testimonials-content .right {
+          width: calc(50% - 100px);
+          margin-bottom: 40px; } }
+      .testimonials .testimonials-content .left h4,
+      .testimonials .testimonials-content .right h4 {
+        font-size: 22px;
+        padding: 10px; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .left h4,
+          .testimonials .testimonials-content .right h4 {
+            font-size: 20px; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .left h4,
+          .testimonials .testimonials-content .right h4 {
+            font-size: 22px; } }
+      .testimonials .testimonials-content .left p,
+      .testimonials .testimonials-content .right p {
+        font-size: 20px;
+        font-style: italic; }
+        @media only screen and (min-width: 992px) {
+          .testimonials .testimonials-content .left p,
+          .testimonials .testimonials-content .right p {
+            font-size: 17px; } }
+    .testimonials .testimonials-content .left {
+      float: left;
+      margin-left: 70px; }
+      .testimonials .testimonials-content .left::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: #e1950e;
+        border: 3px solid #1c6680;
+        border-radius: 50%;
+        position: absolute;
+        right: -40px;
+        top: 25px; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .left::before {
+            display: none; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .left::before {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .left::before {
+            display: none; } }
+        @media only screen and (min-width: 768px) {
+          .testimonials .testimonials-content .left::before {
+            display: block; } }
+      @media only screen and (min-width: 320px) {
+        .testimonials .testimonials-content .left {
+          float: none;
+          margin-left: 0; } }
+      @media only screen and (min-width: 480px) {
+        .testimonials .testimonials-content .left {
+          float: none;
+          margin-left: 0; } }
+      @media only screen and (min-width: 576px) {
+        .testimonials .testimonials-content .left {
+          float: none;
+          margin-left: 0; } }
+      @media only screen and (min-width: 768px) {
+        .testimonials .testimonials-content .left {
+          float: left;
+          margin-left: 70px; } }
+      .testimonials .testimonials-content .left .content::before {
+        content: "";
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent transparent #e1950e;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 25px;
+        right: -20px; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .left .content::before {
+            display: none; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .left .content::before {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .left .content::before {
+            display: none; } }
+        @media only screen and (min-width: 768px) {
+          .testimonials .testimonials-content .left .content::before {
+            display: block; } }
+      .testimonials .testimonials-content .left .text {
+        text-align: center; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .left .text {
+            text-align: left; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .left .text {
+            text-align: left; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .left .text {
+            text-align: left; } }
+        @media only screen and (min-width: 768px) {
+          .testimonials .testimonials-content .left .text {
+            text-align: center; } }
+    .testimonials .testimonials-content .right {
+      float: right;
+      margin-right: 70px; }
+      .testimonials .testimonials-content .right::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: #e1950e;
+        border: 3px solid #1c6680;
+        border-radius: 50%;
+        position: absolute;
+        left: -40px;
+        top: 25px; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .right::before {
+            display: none; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .right::before {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .right::before {
+            display: none; } }
+        @media only screen and (min-width: 768px) {
+          .testimonials .testimonials-content .right::before {
+            display: block; } }
+      @media only screen and (min-width: 320px) {
+        .testimonials .testimonials-content .right {
+          float: none;
+          margin-right: 0; } }
+      @media only screen and (min-width: 480px) {
+        .testimonials .testimonials-content .right {
+          float: none;
+          margin-right: 0; } }
+      @media only screen and (min-width: 576px) {
+        .testimonials .testimonials-content .right {
+          float: none;
+          margin-right: 0; } }
+      @media only screen and (min-width: 768px) {
+        .testimonials .testimonials-content .right {
+          float: right;
+          margin-right: 70px; } }
+      .testimonials .testimonials-content .right .content::before {
+        content: "";
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent #e1950e transparent transparent;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 25px;
+        left: -20px; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .right .content::before {
+            display: none; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .right .content::before {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .right .content::before {
+            display: none; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .right .content::before {
+            display: block; } }
+      .testimonials .testimonials-content .right .text {
+        text-align: center; }
+        @media only screen and (min-width: 320px) {
+          .testimonials .testimonials-content .right .text {
+            text-align: left; } }
+        @media only screen and (min-width: 480px) {
+          .testimonials .testimonials-content .right .text {
+            text-align: left; } }
+        @media only screen and (min-width: 576px) {
+          .testimonials .testimonials-content .right .text {
+            text-align: left; } }
+        @media only screen and (min-width: 768px) {
+          .testimonials .testimonials-content .right .text {
+            text-align: center; } }
+
+.services {
+  width: 100%;
+  padding-bottom: 70px; }
+  .services h2 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fba919; }
+    @media only screen and (min-width: 320px) {
+      .services h2 {
+        font-size: 26px; } }
+    @media only screen and (min-width: 480px) {
+      .services h2 {
+        font-size: 35px; } }
+  .services .serv {
+    padding-top: 50px;
+    display: flex; }
+    @media only screen and (min-width: 320px) {
+      .services .serv {
+        display: block; } }
+    @media only screen and (min-width: 480px) {
+      .services .serv {
+        display: block; } }
+    @media only screen and (min-width: 576px) {
+      .services .serv {
+        display: block; } }
+    @media only screen and (min-width: 768px) {
+      .services .serv {
+        display: flex; } }
+    @media only screen and (min-width: 992px) {
+      .services .serv {
+        display: flex; } }
+    .services .serv .service-one,
+    .services .serv .service-two,
+    .services .serv .service-three {
+      width: 350px;
+      background-color: #000000;
+      margin: 10px;
+      color: #fba919;
+      text-align: center;
+      border-radius: 10px;
+      transition: all .4s;
+      cursor: pointer; }
+      .services .serv .service-one:hover,
+      .services .serv .service-two:hover,
+      .services .serv .service-three:hover {
+        transform: translateY(-15px);
+        box-shadow: 7px 7px 15px #fba919; }
+      @media only screen and (min-width: 320px) {
+        .services .serv .service-one,
+        .services .serv .service-two,
+        .services .serv .service-three {
+          width: 100%;
+          margin-bottom: 25px;
+          padding: 15px; } }
+      @media only screen and (min-width: 480px) {
+        .services .serv .service-one,
+        .services .serv .service-two,
+        .services .serv .service-three {
+          width: 100%;
+          margin-bottom: 25px;
+          padding: 15px; } }
+      @media only screen and (min-width: 576px) {
+        .services .serv .service-one,
+        .services .serv .service-two,
+        .services .serv .service-three {
+          width: 100%;
+          margin-bottom: 25px;
+          padding: 15px; } }
+      @media only screen and (min-width: 768px) {
+        .services .serv .service-one,
+        .services .serv .service-two,
+        .services .serv .service-three {
+          width: 350px;
+          margin: 10px;
+          padding: 10px; } }
+      .services .serv .service-one i,
+      .services .serv .service-two i,
+      .services .serv .service-three i {
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 30px;
+        margin-bottom: 25px; }
+        @media only screen and (min-width: 576px) {
+          .services .serv .service-one i,
+          .services .serv .service-two i,
+          .services .serv .service-three i {
+            font-size: 40px;
+            padding-top: 20px; } }
+        @media only screen and (min-width: 768px) {
+          .services .serv .service-one i,
+          .services .serv .service-two i,
+          .services .serv .service-three i {
+            font-size: 50px;
+            padding-top: 30px; } }
+      .services .serv .service-one h4,
+      .services .serv .service-two h4,
+      .services .serv .service-three h4 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px; }
+        @media only screen and (min-width: 576px) {
+          .services .serv .service-one h4,
+          .services .serv .service-two h4,
+          .services .serv .service-three h4 {
+            font-size: 28px; } }
+        @media only screen and (min-width: 768px) {
+          .services .serv .service-one h4,
+          .services .serv .service-two h4,
+          .services .serv .service-three h4 {
+            font-size: 25px; } }
+      .services .serv .service-one p,
+      .services .serv .service-two p,
+      .services .serv .service-three p {
+        font-size: 20px;
+        margin: 5px; }
+
+.Booking {
+  width: 100%;
+  height: 250px;
+  background-color: #fba919;
+  text-align: center; }
+  .Booking h4 {
+    padding: 25px 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 70px; }
+  .Booking .booking-btn {
+    border: 2px solid #1c6680;
+    color: #1c6680;
+    background-color: transparent;
+    padding: 12px 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    outline: none;
+    width: 180px;
+    cursor: pointer; }
+    .Booking .booking-btn:hover {
+      background-color: #1c6680;
+      color: #fba919; }
+  .Booking .book-form {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    width: 60%;
+    height: 450px;
+    background-color: #1c6680;
+    border: 2px solid #1c6680; }
+    @media only screen and (min-width: 320px) {
+      .Booking .book-form {
+        width: 64%; } }
+    @media only screen and (min-width: 480px) {
+      .Booking .book-form {
+        width: 75%; } }
+    @media only screen and (min-width: 576px) {
+      .Booking .book-form {
+        width: 60%; } }
+    @media only screen and (min-width: 992px) {
+      .Booking .book-form {
+        width: 50%; } }
+    .Booking .book-form .form-content {
+      margin: auto;
+      width: 100%;
+      z-index: inherit;
+      position: relative; }
+      .Booking .book-form .form-content h2 {
+        font-size: 25px;
+        padding-top: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #fba919; }
+        @media only screen and (min-width: 320px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 12px; } }
+        @media only screen and (min-width: 480px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 16px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 25px; } }
+      .Booking .book-form .form-content .close {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fba919;
+        cursor: pointer; }
+        @media only screen and (min-width: 320px) {
+          .Booking .book-form .form-content .close {
+            right: 12px;
+            font-size: 30px; } }
+        @media only screen and (min-width: 480px) {
+          .Booking .book-form .form-content .close {
+            right: 20px;
+            font-size: 34px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content .close {
+            font-size: 40px; } }
+      .Booking .book-form .form-content .book-info {
+        background-color: #000000;
+        padding-top: 30px;
+        padding-bottom: 30px; }
+        @media only screen and (min-width: 576px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 25px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 30px; } }
+        @media only screen and (min-width: 992px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 60px;
+            padding-top: 50px; } }
+        .Booking .book-form .form-content .book-info input {
+          width: 230px;
+          height: 35px;
+          margin-bottom: 22px;
+          margin-left: 15px;
+          vertical-align: middle;
+          outline: none;
+          border: none;
+          color: #757575;
+          border-bottom-color: #1c6680;
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+          background-color: #1c668040;
+          padding: 10px;
+          font-size: 18px;
+          font-weight: bold; }
+          @media only screen and (min-width: 320px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 26px;
+              margin-bottom: 16px; } }
+          @media only screen and (min-width: 480px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 28px;
+              margin-bottom: 13px; } }
+          @media only screen and (min-width: 576px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 28px;
+              margin-bottom: 14px; } }
+          @media only screen and (min-width: 768px) {
+            .Booking .book-form .form-content .book-info input {
+              width: 335px;
+              height: 30px;
+              margin-bottom: 8px; } }
+          @media only screen and (min-width: 992px) {
+            .Booking .book-form .form-content .book-info input {
+              width: 230px;
+              height: 35px;
+              margin-bottom: 22px; } }
+        .Booking .book-form .form-content .book-info button {
+          width: 200px;
+          margin-top: 20px; }
+
+.information {
+  width: 100%;
+  height: 400px;
+  padding-top: 60px;
+  background-color: #000000;
+  color: #fba919; }
+  @media only screen and (min-width: 320px) {
+    .information {
+      height: 520px; } }
+  @media only screen and (min-width: 480px) {
+    .information {
+      height: 400px; } }
+  .information h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px; }
+    @media only screen and (min-width: 320px) {
+      .information h2 {
+        font-size: 26px; } }
+    @media only screen and (min-width: 480px) {
+      .information h2 {
+        font-size: 35px; } }
+  .information .info {
+    position: relative;
+    width: calc(100% / 2);
+    float: left; }
+  .information .info-left {
+    position: relative; }
+    @media only screen and (min-width: 320px) {
+      .information .info-left {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 30px; } }
+    @media only screen and (min-width: 480px) {
+      .information .info-left {
+        width: calc(100% / 2);
+        float: left;
+        text-align: left;
+        margin-bottom: 0; } }
+    @media only screen and (min-width: 992px) {
+      .information .info-left {
+        left: 30px; } }
+    .information .info-left p {
+      font-size: 22px;
+      margin-bottom: 20px; }
+    .information .info-left i {
+      font-size: 35px;
+      margin: 5px;
+      margin-bottom: 20px;
+      cursor: pointer; }
+      .information .info-left i:hover {
+        color: #1c6680;
+        transform: translateY(-8px); }
+  @media only screen and (min-width: 320px) {
+    .information .info-right {
+      width: 100%;
+      float: none;
+      text-align: center; } }
+  @media only screen and (min-width: 480px) {
+    .information .info-right {
+      width: calc(100% / 2);
+      float: left;
+      text-align: left; } }
+  .information .info-right h4 {
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .information .info-right p {
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 5px; }
+    @media only screen and (min-width: 320px) {
+      .information .info-right p {
+        font-size: 14px; } }
+    @media only screen and (min-width: 480px) {
+      .information .info-right p {
+        font-size: 16px; } }
+    @media only screen and (min-width: 576px) {
+      .information .info-right p {
+        font-size: 20px; } }
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #fba919;
+  color: #000000;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold; }
+  @media only screen and (min-width: 320px) {
+    .footer {
+      font-size: 14px; } }
+  @media only screen and (min-width: 480px) {
+    .footer {
+      font-size: 16px; } }
+  .footer span {
+    color: #1c6680;
+    cursor: pointer;
+    transition: .3s; }
+    .footer span:hover {
+      color: #7d1c6c; }
+
+.button, .about .overlay .info .btn, .Booking .book-form .form-content .book-info button, .information .info-left .btn {
+  border: 2px solid #fba919;
+  color: #fba919;
+  background-color: transparent;
+  padding: 12px 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer; }
+  .button:hover, .about .overlay .info .btn:hover, .Booking .book-form .form-content .book-info button:hover, .information .info-left .btn:hover {
+    background-color: #fba919;
+    color: #1c6680; }
+
+.transition, .Booking .booking-btn, .information .info-left i, .button, .about .overlay .info .btn, .Booking .book-form .form-content .book-info button, .information .info-left .btn {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s; }
+
+/*# sourceMappingURL=main.css.map */

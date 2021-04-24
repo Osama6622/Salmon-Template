@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  font-family: "Caveat", cursive; }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto; }
+  @media only screen and (min-width: 320px) {
+    .container {
+      max-width: 290px; } }
+  @media only screen and (min-width: 480px) {
+    .container {
+      max-width: 420px; } }
+  @media only screen and (min-width: 576px) {
+    .container {
+      max-width: 540px; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media only screen and (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+
+.clearfix {
+  clear: both; }
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #fba919;
+  position: fixed;
+  z-index: 333;
+  transition: 0.5s; }
+  .header .nav {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+    .header .nav .logo {
+      width: 480px;
+      padding: 10px;
+      position: relative;
+      cursor: pointer; }
+      @media only screen and (min-width: 320px) {
+        .header .nav .logo {
+          margin-top: 10px; } }
+      @media only screen and (min-width: 480px) {
+        .header .nav .logo {
+          margin-top: 0; } }
+      .header .nav .logo a {
+        text-decoration: none;
+        color: #000000; }
+      .header .nav .logo h1 {
+        margin-top: 32px;
+        font-size: 40px;
+        font-weight: bold; }
+        @media only screen and (min-width: 320px) {
+          .header .nav .logo h1 {
+            font-size: 25px; } }
+        @media only screen and (min-width: 480px) {
+          .header .nav .logo h1 {
+            font-size: 40px; } }
+      .header .nav .logo img {
+        width: 130px;
+        height: 46px;
+        position: absolute;
+        left: 20px;
+        top: 10px; }
+        @media only screen and (min-width: 320px) {
+          .header .nav .logo img {
+            width: 80px;
+            height: 36px;
+            left: 17px;
+            top: 15px; } }
+        @media only screen and (min-width: 480px) {
+          .header .nav .logo img {
+            width: 130px;
+            height: 46px;
+            left: 20px;
+            top: 10px; } }
+    .header .nav .navigation {
+      position: fixed;
+      top: 30px;
+      right: 50px;
+      height: 30px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (min-width: 320px) {
+        .header .nav .navigation {
+          right: 35px; } }
+      @media only screen and (min-width: 480px) {
+        .header .nav .navigation {
+          right: 50px; } }
+      .header .nav .navigation:hover .nav-icon, .header .nav .navigation:hover .nav-icon::before, .header .nav .navigation:hover .nav-icon::after {
+        background-color: #000000; }
+      .header .nav .navigation:hover .nav-icon::before {
+        top: -12px; }
+      .header .nav .navigation:hover .nav-icon::after {
+        top: 12px; }
+      .header .nav .navigation .nav-icon {
+        position: relative;
+        top: 15px; }
+        .header .nav .navigation .nav-icon, .header .nav .navigation .nav-icon::before, .header .nav .navigation .nav-icon::after {
+          width: 40px;
+          height: 4px;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: block;
+          transition: all 0.2s; }
+        .header .nav .navigation .nav-icon::before, .header .nav .navigation .nav-icon::after {
+          content: "";
+          position: absolute;
+          left: 0; }
+        .header .nav .navigation .nav-icon::after {
+          top: 10px; }
+        .header .nav .navigation .nav-icon::before {
+          top: -10px; }
+      .header .nav .navigation .nav-checkbox {
+        display: none; }
+      .header .nav .navigation .checkbox-label {
+        width: 100%;
+        height: 100%;
+        z-index: 33;
+        cursor: pointer; }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon {
+        background-color: transparent; }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon::before {
+        top: 0;
+        transform: rotate(135deg); }
+      .header .nav .navigation .nav-checkbox:checked + .checkbox-label .nav-icon::after {
+        top: 0;
+        transform: rotate(-135deg); }
+      .header .nav .navigation .nav-checkbox:checked ~ .links-container {
+        transform: translateY(0); }
+      .header .nav .navigation .links-container {
+        width: 100%;
+        height: 100vh;
+        background-color: #1c6680;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100vh);
+        transition: all 0.5s cubic-bezier(0.19, 1.02, 0.96, 0.86); }
+        .header .nav .navigation .links-container .links {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center; }
+          .header .nav .navigation .links-container .links ul {
+            list-style: none;
+            text-align: center;
+            line-height: 50px; }
+            .header .nav .navigation .links-container .links ul li {
+              margin: 4px; }
+              .header .nav .navigation .links-container .links ul li a {
+                display: block;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 0 15px;
+                font-weight: bold;
+                color: #000;
+                transition: all 0.4s; }
+                @media only screen and (min-width: 320px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 25px; } }
+                @media only screen and (min-width: 480px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 28px; } }
+                @media only screen and (min-width: 576px) {
+                  .header .nav .navigation .links-container .links ul li a {
+                    font-size: 30px; } }
+                .header .nav .navigation .links-container .links ul li a:hover {
+                  color: #fba919; }
+
+.sticky {
+  background-color: #1c6680; }
+
+.onlin-order {
+  width: 100%;
+  height: 625px; }
+  .onlin-order img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed; }
+  .onlin-order .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 625px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1; }
+    .onlin-order .overlay .info {
+      color: #fba919;
+      vertical-align: middle;
+      text-align: center;
+      width: 700px;
+      height: 450px;
+      margin-top: 40px;
+      background-color: #1c668040;
+      border: 2px solid #1c668040;
+      z-index: 222;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      @media only screen and (min-width: 320px) {
+        .onlin-order .overlay .info {
+          width: 78%; } }
+      @media only screen and (min-width: 480px) {
+        .onlin-order .overlay .info {
+          width: 82%; } }
+      @media only screen and (min-width: 576px) {
+        .onlin-order .overlay .info {
+          width: 92%; } }
+      @media only screen and (min-width: 768px) {
+        .onlin-order .overlay .info {
+          width: 700px; } }
+      .onlin-order .overlay .info h4 {
+        font-size: 25px;
+        padding-top: 40px;
+        font-weight: bold;
+        margin-bottom: 20px; }
+        @media only screen and (min-width: 320px) {
+          .onlin-order .overlay .info h4 {
+            font-size: 20px; } }
+        @media only screen and (min-width: 480px) {
+          .onlin-order .overlay .info h4 {
+            font-size: 22px; } }
+        @media only screen and (min-width: 576px) {
+          .onlin-order .overlay .info h4 {
+            font-size: 25px; } }
+      .onlin-order .overlay .info p {
+        font-size: 20px;
+        margin-bottom: 12px; }
+        @media only screen and (min-width: 320px) {
+          .onlin-order .overlay .info p {
+            font-size: 18px; } }
+        @media only screen and (min-width: 480px) {
+          .onlin-order .overlay .info p {
+            font-size: 20px; } }
+      .onlin-order .overlay .info label {
+        padding: 8px;
+        font-size: 18px;
+        font-weight: bold; }
+        @media only screen and (min-width: 320px) {
+          .onlin-order .overlay .info label {
+            padding: 5px;
+            font-size: 16px; } }
+        @media only screen and (min-width: 480px) {
+          .onlin-order .overlay .info label {
+            padding: 8px;
+            font-size: 18px; } }
+      .onlin-order .overlay .info input[type="radio"] {
+        font-size: 13px;
+        margin-bottom: 20px; }
+      .onlin-order .overlay .info span {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #1c6680bf; }
+        @media only screen and (min-width: 320px) {
+          .onlin-order .overlay .info span {
+            width: 40px;
+            height: 40px; } }
+        @media only screen and (min-width: 480px) {
+          .onlin-order .overlay .info span {
+            width: 45px;
+            height: 45px; } }
+        .onlin-order .overlay .info span i {
+          text-align: center;
+          font-size: 19px;
+          padding: 13px; }
+      .onlin-order .overlay .info input[type="text"] {
+        width: 200px;
+        height: 40px;
+        vertical-align: middle;
+        color: #fba919;
+        border: none;
+        border-bottom-color: #1c6680;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        background-color: #1c668040;
+        padding: 10px;
+        font-size: 20px; }
+        @media only screen and (min-width: 320px) {
+          .onlin-order .overlay .info input[type="text"] {
+            width: 140px;
+            height: 35px; } }
+        @media only screen and (min-width: 480px) {
+          .onlin-order .overlay .info input[type="text"] {
+            width: 200px;
+            height: 40px; } }
+        .onlin-order .overlay .info input[type="text"]:focus {
+          outline: none; }
+      .onlin-order .overlay .info button {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        background-color: #1c6680bf;
+        color: #fba919;
+        border: 2px solid #1c6680;
+        margin-left: -3px;
+        font-size: 20px;
+        cursor: pointer; }
+        .onlin-order .overlay .info button:focus {
+          outline: none; }
+      .onlin-order .overlay .info .meal {
+        margin-bottom: 30px; }
+        .onlin-order .overlay .info .meal input[type="text"] {
+          width: 300px; }
+          @media only screen and (min-width: 320px) {
+            .onlin-order .overlay .info .meal input[type="text"] {
+              width: 170px;
+              height: 35px;
+              font-size: 18px; } }
+          @media only screen and (min-width: 480px) {
+            .onlin-order .overlay .info .meal input[type="text"] {
+              width: 280px;
+              height: 40px;
+              font-size: 20px; } }
+          @media only screen and (min-width: 576px) {
+            .onlin-order .overlay .info .meal input[type="text"] {
+              width: 300px; } }
+      .onlin-order .overlay .info .booking {
+        width: 200px;
+        height: 50px;
+        margin-top: 30px; }
+
+.Booking {
+  width: 100%;
+  height: 250px;
+  background-color: #fba919;
+  text-align: center; }
+  .Booking h4 {
+    padding: 25px 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 70px; }
+  .Booking .booking-btn {
+    border: 2px solid #1c6680;
+    color: #1c6680;
+    background-color: transparent;
+    padding: 12px 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    outline: none;
+    width: 180px;
+    cursor: pointer; }
+    .Booking .booking-btn:hover {
+      background-color: #1c6680;
+      color: #fba919; }
+  .Booking .book-form {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    width: 60%;
+    height: 450px;
+    background-color: #1c6680;
+    border: 2px solid #1c6680; }
+    @media only screen and (min-width: 320px) {
+      .Booking .book-form {
+        width: 64%; } }
+    @media only screen and (min-width: 480px) {
+      .Booking .book-form {
+        width: 75%; } }
+    @media only screen and (min-width: 576px) {
+      .Booking .book-form {
+        width: 60%; } }
+    @media only screen and (min-width: 992px) {
+      .Booking .book-form {
+        width: 50%; } }
+    .Booking .book-form .form-content {
+      margin: auto;
+      width: 100%;
+      z-index: inherit;
+      position: relative; }
+      .Booking .book-form .form-content h2 {
+        font-size: 25px;
+        padding-top: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #fba919; }
+        @media only screen and (min-width: 320px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 12px; } }
+        @media only screen and (min-width: 480px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 16px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content h2 {
+            font-size: 25px; } }
+      .Booking .book-form .form-content .close {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fba919;
+        cursor: pointer; }
+        @media only screen and (min-width: 320px) {
+          .Booking .book-form .form-content .close {
+            right: 12px;
+            font-size: 30px; } }
+        @media only screen and (min-width: 480px) {
+          .Booking .book-form .form-content .close {
+            font-size: 34px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content .close {
+            font-size: 40px; } }
+      .Booking .book-form .form-content .book-info {
+        background-color: #000000;
+        padding-top: 30px;
+        padding-bottom: 30px; }
+        @media only screen and (min-width: 576px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 25px; } }
+        @media only screen and (min-width: 768px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 30px; } }
+        @media only screen and (min-width: 992px) {
+          .Booking .book-form .form-content .book-info {
+            padding-bottom: 60px;
+            padding-top: 50px; } }
+        .Booking .book-form .form-content .book-info input {
+          width: 230px;
+          height: 35px;
+          margin-bottom: 22px;
+          margin-left: 15px;
+          vertical-align: middle;
+          outline: none;
+          border: none;
+          color: #757575;
+          border-bottom-color: #1c6680;
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+          background-color: #1c668040;
+          padding: 10px;
+          font-size: 18px;
+          font-weight: bold; }
+          @media only screen and (min-width: 320px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 26px;
+              margin-bottom: 16px; } }
+          @media only screen and (min-width: 480px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 28px;
+              margin-bottom: 13px; } }
+          @media only screen and (min-width: 576px) {
+            .Booking .book-form .form-content .book-info input {
+              height: 28px;
+              margin-bottom: 14px; } }
+          @media only screen and (min-width: 768px) {
+            .Booking .book-form .form-content .book-info input {
+              width: 335px;
+              height: 30px;
+              margin-bottom: 8px; } }
+          @media only screen and (min-width: 992px) {
+            .Booking .book-form .form-content .book-info input {
+              width: 230px;
+              height: 35px;
+              margin-bottom: 22px; } }
+        .Booking .book-form .form-content .book-info button {
+          width: 200px;
+          margin-top: 20px; }
+
+.information {
+  width: 100%;
+  height: 400px;
+  padding-top: 60px;
+  background-color: #000000;
+  color: #fba919; }
+  @media only screen and (min-width: 320px) {
+    .information {
+      height: 520px; } }
+  @media only screen and (min-width: 480px) {
+    .information {
+      height: 400px; } }
+  .information h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px; }
+    @media only screen and (min-width: 320px) {
+      .information h2 {
+        font-size: 25px; } }
+    @media only screen and (min-width: 480px) {
+      .information h2 {
+        font-size: 28px; } }
+    @media only screen and (min-width: 576px) {
+      .information h2 {
+        font-size: 32px; } }
+    @media only screen and (min-width: 768px) {
+      .information h2 {
+        font-size: 35px; } }
+  .information .info {
+    position: relative;
+    width: calc(100% / 2);
+    float: left; }
+  .information .info-left {
+    position: relative; }
+    @media only screen and (min-width: 320px) {
+      .information .info-left {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 30px; } }
+    @media only screen and (min-width: 480px) {
+      .information .info-left {
+        width: calc(100% / 2);
+        float: left;
+        text-align: left;
+        margin-bottom: 0; } }
+    @media only screen and (min-width: 992px) {
+      .information .info-left {
+        left: 30px; } }
+    .information .info-left p {
+      font-size: 22px;
+      margin-bottom: 20px; }
+      @media only screen and (min-width: 320px) {
+        .information .info-left p {
+          font-size: 20px; } }
+      @media only screen and (min-width: 480px) {
+        .information .info-left p {
+          font-size: 18px; } }
+      @media only screen and (min-width: 576px) {
+        .information .info-left p {
+          font-size: 22px; } }
+    .information .info-left i {
+      font-size: 35px;
+      margin: 5px;
+      margin-bottom: 20px;
+      cursor: pointer; }
+      .information .info-left i:hover {
+        color: #1c6680;
+        transform: translateY(-8px); }
+  @media only screen and (min-width: 320px) {
+    .information .info-right {
+      width: 100%;
+      float: none;
+      text-align: center; } }
+  @media only screen and (min-width: 480px) {
+    .information .info-right {
+      width: calc(100% / 2);
+      float: left;
+      text-align: left; } }
+  .information .info-right h4 {
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .information .info-right p {
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 5px; }
+    @media only screen and (min-width: 320px) {
+      .information .info-right p {
+        font-size: 14px; } }
+    @media only screen and (min-width: 480px) {
+      .information .info-right p {
+        font-size: 15px; } }
+    @media only screen and (min-width: 576px) {
+      .information .info-right p {
+        font-size: 20px; } }
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #fba919;
+  color: #000000;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold; }
+  @media only screen and (min-width: 320px) {
+    .footer {
+      font-size: 14px; } }
+  @media only screen and (min-width: 480px) {
+    .footer {
+      font-size: 16px; } }
+  .footer span {
+    color: #1c6680;
+    cursor: pointer;
+    transition: 0.3s; }
+    .footer span:hover {
+      color: #7d1c6c; }
+
+.button, .onlin-order .overlay .info .booking, .Booking .book-form .form-content .book-info button, .information .info-left .btn {
+  border: 2px solid #fba919;
+  color: #fba919;
+  background-color: transparent;
+  padding: 12px 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .button:hover, .onlin-order .overlay .info .booking:hover, .Booking .book-form .form-content .book-info button:hover, .information .info-left .btn:hover {
+    background-color: #fba919;
+    color: #1c6680; }
+
+.transition, .Booking .booking-btn, .information .info-left i, .button, .onlin-order .overlay .info .booking, .Booking .book-form .form-content .book-info button, .information .info-left .btn {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s; }
+
+/*# sourceMappingURL=order-online.css.map */

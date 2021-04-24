@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALMON</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Start Header-->
+    <div class="header" id="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>SALMON</h1>
+                        <img src="images/1.png" alt="Salmon">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <input type="checkbox" class="nav-checkbox" id="navigation">
+                    <label for="navigation" class="checkbox-label">
+                        <span class="nav-icon"></span>
+                    </label>
+                    <div class="links-container">
+                        <div class="links">
+                            <ul id="link">
+                                <li><a href="index.html" class="active">HOME</a></li>
+                                <li><a href="menu.html">MENU</a></li>
+                                <li><a href="order-online.html">ORDER ONLINE</a></li>
+                                <li><a href="location.html">LOCATION</a></li>
+                                <li><a href="sign-up.html">SIGN UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header-->
+
+    <!-- Strat Menu  -->
+    <div class="menu">
+        <div class="container">
+            <h2>What Will You Eat Today !</h2>
+            <div class="tab">
+                <button id="default-open" class="tablink" onclick="openMenu(event, 'all')">All</button>
+                <button class="tablink" onclick="openMenu(event, 'salmon')">Salmon</button>
+                <button class="tablink" onclick="openMenu(event, 'fish')">Fish</button>
+                <button class="tablink" onclick="openMenu(event, 'seafood')">seafood</button>
+            </div>
+                <!-- All Block -->
+            <div id="all" class="tabcontent">
+                <div class="meal">
+                    <img src="images/menu/fish/01.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Sardines</h3>
+                            <p>18$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/02.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Fish</h3>
+                            <p>22$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/03.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Spicy Grilled Fish</h3>
+                            <p>22$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/05.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Roasted Fish</h3>
+                            <p>20$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/06.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Fish</h3>
+                            <p>22$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/07.jpg" alt="fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Ginger & Coriander Marinated Fish</h3>
+                            <p>25$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/02.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Garlic Butter Baked Salmon</h3>
+                            <p>25$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/03.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Smoked Salmon</h3>
+                            <p>23$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/04.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Wild Caught Pacific Salmon</h3>
+                            <p>20$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/01.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gambo</h3>
+                            <p>40$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/02.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Louisiana</h3>
+                            <p>45$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/05.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>40$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/04.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Sausage Gumbo</h3>
+                            <p>50$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/06.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>40$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/07.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>40$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/03.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>40$</p>
+                            <button>Order online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Salmon Blcok -->
+            <div id="salmon" class="tabcontent">
+                <div class="meal">
+                    <img src="images/menu/salmon/01.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Garlic Butter Baked Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/02.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Garlic Butter Baked Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/03.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Smoked Salmon</h3>
+                            <p>42$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/04.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Wild Caught Pacific Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/05.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Sockeye Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/07.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Baked Cod</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/08.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Garlic Butter Baked Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/09.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Cocktail</h3>
+                            <p>45$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/010.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Smoked Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/011.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seared Salmon Salad</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/012.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Hawaiian Garlic Shrimp</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/013.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Sriracha Shrimp</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/014.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Teriyaki Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/015.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Easy Lemon Thyme Roasted Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/016.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>White Wine Garlic Salmon</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/salmon/017.jpg" alt="Salmon">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Baked Salmon In Foil Packs</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <!-- Fish Block -->
+            <div id="fish" class="tabcontent">
+                <div class="meal">
+                    <img src="images/menu/fish/01.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Sardines</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/02.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Balinese Grilled Fish</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/03.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Spicy Grilled Fish Masala</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/04.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Spicy Grilled Fish Masala</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/05.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Roasted Fish With Tomatoes & Herbs</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/06.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Fish</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/07.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Ginger & Coriander Marinated Fish</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/08.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Fish</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/09.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Baked Snapper With Lemon, Garlic & Chilli</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/010.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Greek Whole Roasted Branzino</h3>
+                            <p>38$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/011.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Red Snapper</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/012.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Vietnamese Baked Snapper</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/013.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Bronzino With Tomatoes & Herbs</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/014.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Bronzino With Rosemary Vinaigrette</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/015.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Caribbean Grilled Whole Red Snapper</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/fish/016.jpg" alt="Fish">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Grilled Bronzino With Lemon & Herbs</h3>
+                            <p>35$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Seafood Block -->
+            <div id="seafood" class="tabcontent">
+                <div class="meal">
+                    <img src="images/menu/seafood/01.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/02.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Louisiana</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/03.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Soup</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/04.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Sausage Gumbo</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/05.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Soup</h3>
+                            <p>42$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/06.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Soup</h3>
+                            <p>42$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/07.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/09.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Gumbo</h3>
+                            <p>45$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/010.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Pasta</h3>
+                            <p>42$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/011.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Skillet Grilled Seafood</h3>
+                            <p>40$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/012.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Simple Seafood Bisque</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/013.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Oven-Roasted Dungeness Creb</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/014.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Lettuce Wraps</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/015.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Boil</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/016.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Shrimp Fajitas</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <img src="images/menu/seafood/017.jpg" alt="Seafood">
+                    <div class="meal-overlay">
+                        <div class="text">
+                            <h3>Seafood Boil</h3>
+                            <p>44$</p>
+                            <button>Order Online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Menu  -->
+
+    <!-- Start Book Table -->
+    <div class="Booking">
+        <div class="container">
+            <h4>BOOK A TABLE NOW!</h4>
+            <button id="booking" class="booking-btn" onclick="bookingTable()">BOOK NOW</button>
+            <div id="book-form" class="book-form">
+                <div class="form-content">
+                    <h2>TABLE BOOKING RESERVATION FORM</h2>
+                    <span id="close" class="close">&times;</span>
+                    <div class="book-info">
+                        <input type="text" placeholder="Name..">
+                        <input type="email" placeholder="Email..">
+                        <input type="tel" placeholder="Mobile..">
+                        <input type="date" placeholder="Date..">
+                        <input type="time" placeholder="Time..">
+                        <input type="number" min="1" placeholder="2 Person">
+                        <button>Book A Table</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- End Book Table -->
+
+    <!-- Start Information Section -->
+    <div class="information">
+        <div class="container">
+            <h2>Join The Salmon`s Family!</h2>
+            <div class="info-box">
+                <div class="info info-left">
+                    <p>We`ll Only Send Our Amazing Goods, We promise.</p>
+                    <div>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fas fa-envelope-square"></i>
+                    </div>
+                    <button class="btn">Sign Up</button>
+                </div>
+                <div class="info info-right">
+                    <h4>Hours:</h4>
+                    <p>Thursday + Friday + Saturday   11am - 12am</p>
+                    <p>Sunday To Wednesday  11am - 11pm</p>
+                    <p>*Kitchen open until 11pm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Information Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>All Rights Reserved &copy; <span>Osama Nos7y 2021</span></p>
+        </div>
+    </div>
+
+    <!-- End Footer -->
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

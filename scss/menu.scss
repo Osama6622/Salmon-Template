@@ -1,0 +1,713 @@
+@import "mediaQueries";
+
+  $mainColor: #fba919;
+  $secondColor: #1c6680;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  @include responsive(xsm-phone) {
+    max-width: 290px;
+  }
+  @include responsive(sm-phone) {
+    max-width: 420px;
+  }
+  @include responsive(phone) {
+    max-width: 540px;
+  }
+  @include responsive(tablet) {
+    max-width: 720px;
+  }
+  @include responsive(desktop) {
+    max-width: 960px;
+  }
+  @include responsive(larg-desktop) {
+    max-width: 1140px;
+  }
+}
+.clearfix {
+  clear: both;
+}
+
+// Start Header
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: $mainColor;
+  position: fixed;
+  z-index: 333;
+  transition: .5s;
+  .nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .logo {
+      width: 480px;
+      padding: 10px;
+      position: relative;
+      cursor: pointer;
+      @include responsive(xsm-phone) {
+        margin-top: 10px;
+      }
+      @include responsive(sm-phone) {
+        margin-top: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
+      h1 {
+        margin-top: 32px;
+        font-size: 40px;
+        font-weight: bold;
+        @include responsive(xsm-phone) {
+          font-size: 25px;
+        }
+        @include responsive(sm-phone) {
+          font-size: 40px;
+        }
+      }
+      img {
+        width: 130px;
+        height: 46px;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        @include responsive(xsm-phone) {
+          width: 80px;
+          height: 36px;
+          left: 17px;
+          top: 15px;
+        }
+        @include responsive(sm-phone) {
+          width: 130px;
+          height: 46px;
+          left: 20px;
+          top: 10px;
+        }
+      }
+    }
+    .navigation {
+      position: fixed;
+      top: 30px;
+      right: 50px;
+      height: 30px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include responsive(xsm-phone) {
+        right: 75px;
+      }
+      @include responsive(phone) {
+        right: 130px;
+      }
+      @include responsive(tablet) {
+        right: 50px;
+      }
+      &:hover .nav-icon {
+        &,
+        &::before,
+        &::after {
+          background-color: #000000;
+        }
+        &::before {
+          top: -12px;
+        }
+        &::after {
+          top: 12px;
+        }
+      }
+      .nav-icon {
+        position: relative;
+        top: 15px;
+        &,
+        &::before,
+        &::after {
+          width: 40px;
+          height: 4px;
+          background-color: rgba($color: #000000, $alpha: 0.6);
+          display: block;
+          transition: all 0.2s;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+        &::after {
+          top: 10px;
+        }
+        &::before {
+          top: -10px;
+        }
+      }
+      .nav-checkbox {
+        display: none;
+      }
+      .checkbox-label {
+        width: 100%;
+        height: 100%;
+        z-index: 33;
+        cursor: pointer;
+      }
+      .nav-checkbox:checked + .checkbox-label .nav-icon {
+        background-color: transparent;
+      }
+      .nav-checkbox:checked + .checkbox-label .nav-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+      .nav-checkbox:checked + .checkbox-label .nav-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+      .nav-checkbox:checked ~ .links-container {
+        transform: translateY(0);
+      }
+      .links-container {
+        width: 100%;
+        height: 100vh;
+        background-color: $secondColor;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100vh);
+        transition: all 0.5s cubic-bezier(0.19, 1.02, 0.96, 0.86);
+        .links {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          ul {
+            list-style: none;
+            text-align: center;
+            line-height: 50px;
+            li {
+              margin: 4px;
+              a {
+                display: block;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 0 15px;
+                font-weight: bold;
+                color: #000;
+                transition: all .4s;
+                @include responsive(xsm-phone) {
+                  font-size: 25px;
+                }
+                @include responsive(sm-phone) {
+                  font-size: 28px;
+                }
+                @include responsive(phone) {
+                  font-size: 30px;
+                }
+                &:hover {
+                  color: $mainColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sticky {
+  background-color: $secondColor;
+}
+// End Header
+
+// Start Menu 
+
+.menu {
+  width: 100%;
+  height: 1600px;
+  @include responsive(xsm-phone) {
+    height: 3960px;
+  }
+  @include responsive(sm-phone) {
+    height: 2130px;
+  }
+  @include responsive(phone) {
+    height: 2910px;
+  }
+  @include responsive(tablet) {
+    height: 2860px;
+  }
+  @include responsive(desktop) {
+    height: 2210px;
+  }
+  @include responsive(larg-desktop) {
+    height: 1600px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 140px;
+    color: $mainColor;
+    @include responsive(xsm-phone) {
+      font-size: 28px;
+    }
+    @include responsive(sm-phone) {
+      font-size: 30px;
+    }
+  }
+  .tab {
+    text-align: center;
+    padding-top: 30px;
+    overflow: hidden;
+    margin: 10px auto;
+    button {
+      @extend .button;
+      width: 150px;
+      margin: 10px;
+      outline: none;
+      @include responsive(tablet) {
+        width: calc( 86% / 4);
+      }
+      @include responsive(desktop) {
+        width: 150px;
+      }
+    }
+    .active {
+      background-color: $mainColor;
+      color: $secondColor;
+      outline: none;
+    }
+  }  
+  .tabcontent {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    .meal {
+      width: calc(95% / 4);
+      height: 300px;
+      float: left;
+      margin: 6px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 3px 3px 12px $mainColor;
+      @include responsive(xsm-phone) {
+        width: 100%;
+        height: 200px;
+      }
+      @include responsive(sm-phone) {
+        width: calc(93% / 2 );
+        height: 200px;
+      }
+      @include responsive(phone) {
+        width: calc(95% / 2 );
+        height: 300px;
+      }
+      @include responsive(tablet) {
+        width: calc(94% / 2 );
+      }
+      @include responsive(desktop) {
+        width: calc(95% / 3 );
+      }
+      @include responsive(larg-desktop) {
+        width: calc(95% / 4 );
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .meal-overlay {
+        @extend .transition;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #fba919b0;
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out;
+        transform-origin: left;
+        .text {
+          color: #000000;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+          h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 20px;
+            font-weight: bold;
+          }
+          button {
+            @extend .transition;
+            padding: 10px 10px;
+            margin-top: 15px;
+            border: 2px solid $secondColor;
+            color: #000000;
+            background-color: transparent;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            @include responsive(xsm-phone) {
+              padding: 5px 10px;
+              font-size: 12px;
+            }
+            @include responsive(sm-phone) {
+              padding: 5px 10px;
+              font-size: 11px;
+            }
+            @include responsive(phone) {
+              font-size: 16px;
+              padding: 8px 8px;
+            }
+            @include responsive(tablet) {
+              font-size: 18px;
+              padding: 10px 10px;
+            }
+            &:hover {
+              background-color: $secondColor;
+              color: $mainColor;
+            }
+          }
+        }
+      }
+      &:hover .meal-overlay {
+        transform: scaleX(1);
+        transition: transform .5s ease-in-out;
+        transform-origin: left;
+      }
+    }
+  }
+}
+
+// End Menu
+
+//Start Book Table
+.Booking {
+  width: 100%;
+  height: 250px;
+  background-color: $mainColor;
+  text-align: center;
+  h4 {
+    padding: 25px 0 ;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 70px
+  }
+  .booking-btn {
+    @extend .transition;
+    border: 2px solid $secondColor;
+    color: $secondColor;
+    background-color: transparent;
+    padding: 12px 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    outline: none;
+    width: 180px;
+    cursor: pointer;
+    &:hover {
+      background-color: $secondColor;
+      color: $mainColor;
+    }
+  }
+  .book-form {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    width: 60%;
+    height: 450px;
+    background-color: $secondColor;
+    border: 2px solid $secondColor;
+    @include responsive(xsm-phone) {
+      width: 64%;
+    }
+    @include responsive(sm-phone) {
+      width: 75%;
+    }
+    @include responsive(phone) {
+      width: 60%;
+    }
+    @include responsive(desktop) {
+      width: 50%;
+    }
+    .form-content {
+      margin: auto;
+      width: 100%;
+      z-index: inherit;
+      position: relative;
+      h2 {
+        font-size: 25px;
+        padding-top: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: $mainColor;
+        @include responsive(xsm-phone) {
+          font-size: 12px;
+        }
+        @include responsive(sm-phone) {
+          font-size: 16px;
+        }
+        @include responsive(tablet) {
+          font-size: 25px;
+        }
+      }
+      .close {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: $mainColor;
+        cursor: pointer;
+        @include responsive(xsm-phone) {
+          right: 12px;
+          font-size: 30px
+        }
+        @include responsive(sm-phone) {
+          font-size: 34px;
+        }
+        @include responsive(tablet) {
+          font-size: 40px;
+        }
+      }
+      .book-info {
+        background-color: #000000;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include responsive(phone) {
+          padding-bottom: 25px;
+        }
+        @include responsive(tablet) {
+          padding-bottom: 30px;
+        }
+        @include responsive(desktop) {
+          padding-bottom: 60px;
+          padding-top: 50px;
+        }
+        input {
+          width: 230px;
+          height: 35px;
+          margin-bottom: 22px;
+          margin-left: 15px;
+          vertical-align: middle;
+          outline: none;
+          border: none;
+          color: #757575;
+          border-bottom-color: $secondColor;
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+          background-color: #1c668040;
+          padding: 10px;
+          font-size: 18px;
+          font-weight: bold;
+          @include responsive(xsm-phone) {
+            height: 26px;
+            margin-bottom: 16px;
+          }
+          @include responsive(sm-phone) {
+            height: 28px;
+            margin-bottom: 13px;
+          }
+          @include responsive(phone) {
+            height: 28px;
+            margin-bottom: 14px;
+          }
+          @include responsive(tablet) {
+            width: 335px;
+            height: 30px;
+            margin-bottom: 8px
+          }
+          @include responsive(desktop) {
+            width: 230px;
+            height: 35px;
+            margin-bottom: 22px;
+          }
+        }
+        button {
+          @extend .button;
+          width: 200px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+//End Book Table
+
+// Start Information 
+.information {
+  width: 100%;
+  height: 400px;
+  padding-top: 60px;
+  background-color: #000000;
+  color: $mainColor;
+  @include responsive(xsm-phone) {
+    height: 540px;
+  }
+  @include responsive(sm-phone) {
+    height: 400px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    @include responsive(xsm-phone) {
+      font-size: 28px;
+    }
+    @include responsive(sm-phone) {
+      font-size: 35px;
+    }
+  }
+  .info {
+    position: relative;
+    width: calc(100% / 2);
+    float: left;
+  }
+  .info-left {
+    position: relative;
+    @include responsive(xsm-phone) {
+      width: 100%;
+      float: none;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    @include responsive(sm-phone) {
+      width: calc(100% / 2);
+      float: left;
+      text-align: left;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 22px;
+      margin-bottom: 20px;
+      @include responsive(sm-phone) {
+        font-size: 20px;
+      }
+      @include responsive(phone) {
+        font-size: 22px;
+      }
+    }
+    i {
+      @extend .transition;
+      font-size: 35px;
+      margin: 5px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      &:hover {
+        color: $secondColor;
+        transform: translateY(-8px);
+      }
+    }
+    .btn {
+     @extend .button;
+    }
+  }
+  .info-right {
+    @include responsive(xsm-phone) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    @include responsive(sm-phone) {
+      width: calc(100% / 2);
+      float: left;
+      text-align: left;
+    }
+    h4 {
+      margin-left: 30px;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      margin-left: 30px;
+      padding: 5px;
+      @include responsive(xsm-phone) {
+        font-size: 15px;
+      }
+      @include responsive(sm-phone) {
+        font-size: 15px;
+      }
+      @include responsive(phone) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+// End Information
+
+// Start Footer
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: $mainColor;
+  color: #000000;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  @include responsive(xsm-phone) {
+    font-size: 14px;
+  }
+  @include responsive(sm-phone) {
+    font-size: 16px;
+  }
+  span {
+    color: $secondColor;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: #7d1c6c;
+    }
+  }
+}
+// End Footer
+
+// Extended Classes
+.button {
+    @extend .transition;
+    border: 2px solid $mainColor;
+    color: $mainColor;
+    background-color: transparent;
+    padding: 12px 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background-color: $mainColor;
+      color: $secondColor;
+    }
+  }
+  
+  .transition {
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+  }
